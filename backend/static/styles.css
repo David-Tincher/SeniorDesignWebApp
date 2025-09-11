@@ -14,9 +14,10 @@ header {
     background-color: #f8f9fa;
     padding: 20px;
     border-bottom: 2px solid #dee2e6;
-    height: 400px; /* Set a fixed height for the scrollable area */
-    overflow-y: auto; /* Enable vertical scrolling */
+    /*height: 400px; */ /* Set a fixed height for the scrollable area */
+    /* overflow-y: auto; */ /* Enable vertical scrolling */
 }
+
 
 .header-layout {
     display: flex;
@@ -29,14 +30,13 @@ header {
 }
 
 .header-icon {
-    width: 100%;
-    max-width: 150px;
+    flex: 1 1 200px;         /* flexible basis of 200px */
+    max-width: 200px;        /* cap image size */
     height: auto;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0; /* Prevent icons from shrinking */
 }
 
 .header-icon:hover {
