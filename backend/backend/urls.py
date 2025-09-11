@@ -1,6 +1,9 @@
+from django.contrib import admin
 from django.urls import path
-from django.views.generic import TemplateView
+from django.conf import settings
+from django.conf.urls.static import static
+from . import views
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="index.html")),
-]
+    path('', views.home, name='home'),
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0] if settings.STATICFILES_DIRS else None)
