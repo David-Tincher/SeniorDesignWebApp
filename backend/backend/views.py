@@ -3,10 +3,6 @@ from django.conf import settings
 import os
 
 def home(request):
-<<<<<<< HEAD
-    image_url = settings.MEDIA_URL + 'images/randompic1.png'
-    return render(request, 'index.html', {'image_url': image_url})
-=======
     images_dir = os.path.join(settings.STATICFILES_DIRS[0], 'images')
     image_files = []
 
@@ -16,4 +12,3 @@ def home(request):
                 image_files.append(f'images/{filename}')
 
     return render(request, 'index.html', {'image_files': image_files})
->>>>>>> 0f7385f5ecc00ccc4272f97e0f071e978cce2acc
