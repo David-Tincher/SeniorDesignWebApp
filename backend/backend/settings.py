@@ -40,6 +40,8 @@ DATABASES = {
     }
 }
 
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'backend/static']
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'backend/media'
